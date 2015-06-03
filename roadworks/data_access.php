@@ -135,8 +135,8 @@ function db_connect()
 
 function format_road( $road )
 {
-    $search = array( "/$road->name /", '/SB/', '/NB/', '/jct/i', '/jnc/i', '/lenght/' );
-    $replace= array( '', 'Southbound', 'Northbound', 'Junction', 'Junction', 'length' );
+    $search = array( "/$road->name /", '/SB/', '/NB/', '/jct/i', '/jnc/i', '/lenght/', '/hardshoulder/' );
+    $replace= array( '', 'Southbound', 'Northbound', 'Junction', 'Junction', 'length', 'hard shoulder' );
     $text   = '';
     $class  = $road->name[0] == 'A' ? 'a-road' : 'm-way';
 
