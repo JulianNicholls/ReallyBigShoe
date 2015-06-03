@@ -1,6 +1,4 @@
 <?php
-//---------------------------------------------------------------------------
-// AJAX calls to return the data for a road or a location
 
     if( isset( $_GET['road'] ) )
     {
@@ -11,37 +9,6 @@
         echo location_data( $_GET['location'] );
     }
 
-    
-//---------------------------------------------------------------------------
-// Clear out all the roads from the database in preparation to replace them.
-
-function empty_roads( $conn )      // Wouldn't that be a nice thing?
-{
-    return $conn->query( "DELETE FROM roadworks" );     // Nuclear option
-}
-
-
-//---------------------------------------------------------------------------
-// Add a road's information
-
-function add_road( $conn, $road )
-{
-    $location    = $conn->real_escape_String( $road->location );
-    $description = $conn->real_escape_String( $road->description );
-    
-    $query_string = 'INSERT INTO roadworks ( name, location, mapref, start, end, delay, description )' .
-                    "VALUES( '$road->road', '$location', " .
-                    "'$road->centre_easting $road->centre_northing', " .
-                    "'$road->start_date', '$road->end_date', '$road->delay', " .
-                    "'$description')";
-
-//    echo $query_string;
-
-    return $conn->query( $query_string );
-}
-
-//---------------------------------------------------------------------------
-// Return a list of roads that have outstanding roadworks, in name order.
 
 function road_list()
 {
@@ -57,15 +24,9 @@ function road_list()
         $result->close();
     }
     
-    natsort( $roads );      // Change ordering to make sense
-    
     return $roads;
 }
 
-
-//---------------------------------------------------------------------------
-// Return all the roadworks data for a road, formatted as HTML articles.
-// This may be one or more records.
 
 function road_data( $road )
 {
@@ -85,10 +46,6 @@ function road_data( $road )
     return $data;
 }
 
-
-//---------------------------------------------------------------------------
-// Return all the roadworks that mention a location as HTML articles.
-// Potentially, there will be no return data.
 
 function location_data( $location )
 {
@@ -114,9 +71,6 @@ function location_data( $location )
 }
 
 
-//---------------------------------------------------------------------------
-// Establish a DB connection.
-
 function db_connect()
 {
     $conn = new mysqli( NULL, 'juliann1_rw', 'roadworks', 'juliann1_roadworks' );
@@ -128,15 +82,11 @@ function db_connect()
     return $conn;
 }
 
-  
-//---------------------------------------------------------------------------
-// Format a road as an HTML article.
-// Certain words are corrected or extended.
-
+        
 function format_road( $road )
 {
-    $search = array( "/$road->name /", '/SB/', '/NB/', '/jct/i', '/jnc/i', '/lenght/' );
-    $replace= array( '', 'Southbound', 'Northbound', 'Junction', 'Junction', 'length' );
+    $search = array( "/$road->name /", '/SB/', '/NB/', '/jct/i', '/lenght/', '/hardshoulder/i' );
+    $replace= array( '', 'Southbound', 'Northbound', 'Jct', 'length', 'hard shoulder' );
     $text   = '';
     $class  = $road->name[0] == 'A' ? 'a-road' : 'm-way';
 

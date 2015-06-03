@@ -6,7 +6,7 @@
 <?php if( $_SERVER['SERVER_NAME'] == 'localhost' ) : ?>  
   <title>RW Local</title>
 <?php else : ?>
-    <title>Highways Agency Roadworks Information - Updated 2013-08-17</title>
+  <title>Highways Agency Roadworks Information - Updated 2013-08-17</title>
 <?php endif; ?>
   <link rel="stylesheet" href="roadworks.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -35,7 +35,7 @@
 ?>
           </select><br />
           <label for="location">Search Location</label>
-          <input type="text" name="location" value="" id="location" />
+          <input type="text" name="location" value="" id="location" placeholder="Location" />
         </fieldset>
       </form>
     </div>  <!-- form-holder -->
@@ -49,23 +49,22 @@
       </a>
     </p>
 
-    <p>Presented here is the latest data on planned roadworks on the UK Highway Agency's roads,
+    <p>Presented here is the latest data on planned roadworks on the Highway Agency's roads,
      distilled from the data files on
      <a href="http://data.gov.uk/dataset/highways_agency_planned_roadworks" title="dataset">this page</a>. 
      You can find information presented by road number, or search by location.  
     </p>
-    <p>These are the outstanding roadworks from the 15 Apr 2013 data on the site,
-      covering roadworks up to early 2014. 
+    <p>These are the outstanding roadworks from the 11 Nov 2013 data on the site,
+      covering roadworks up to the middle of 2014. 
       I will keep this page updated as new roadworks are posted on the DfT site, 
-      which is not currently happening very regularly. Apologies to all who
-      have been following this page, I have been too busy to update it for a while.
+      which is currently happening fairly regularly.
     </p>
     <p>There are more information sets available, e.g. car parks and cycle routes, 
       that I plan to look at, so please keep coming back for more.    
     </p>
   
     <div id="roadworks-info">
-      <?php echo road_data( 'A3' ); ?>
+      <?php echo road_data( 'A1' ); ?>
     </div><!-- #roadworks-info -->
   </div>
   
@@ -73,9 +72,10 @@
     <img src="images/RBSLogo2_small.png" alt="RBS Small Logo">
     <nav>
       <li><a href="http://reallybigshoe.co.uk/portfolio.html">Portfolio</a></li>
-      <li><a href="http://twitter.com/ReallyBigShoeUK">Twitter</a></li>
+      <li><a href="http://twitter.com/ReallyBigShoeUK" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/JulianNicholls" target="_blank">GitHub</a></li>
     </nav>
-    <small>Created on a MAC with <a href="http://macromates.com/">TextMate</a>,
+    <small>Originally created on a MAC with <a href="http://macromates.com/">TextMate</a>,
       <a href="http://www.mysql.com/">MySQL</a>,        
       <a href="http://www.perl.org/">Perl</a>, and 
       <a href="http://php.net">PHP</a></small>   

@@ -1,7 +1,10 @@
 <?php
+    if( $argc < 2 )
+        die( "You need to specify the XML filename" );
+
     require_once "data_access.php";
     
-    $raw_xml   = file_get_contents( "ha-roadworks_2013_04_15.xml" );
+    $raw_xml   = file_get_contents( $argv[1] );
     $road_data = simplexml_load_string( $raw_xml );
     $conn      = db_connect();
     
