@@ -1,4 +1,4 @@
-# /usr/bin/env ruby -I. -w
+#!/usr/bin/env ruby -I.
 
 require 'nokogiri'
 require 'sequel'
@@ -22,7 +22,8 @@ class RoadworksLoader
     db         = Sequel.postgres('roadworks')
     @roadworks = db[:roadworks]
   rescue => e
-    puts "Cannot open #{xml_file}: #{e.message}"
+    puts "Cannot open #{filename}: #{e.message}"
+    exit
   end
 
   def process_file(verbose = true)
