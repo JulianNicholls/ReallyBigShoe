@@ -6,6 +6,28 @@ require 'sequel'
 
 class RoadworksApp < Sinatra::Application
 
+  db = Sequel.postgres('roadworks')
+  @roadworks = db[:roadworks]
+  roadlist = @roadworks.select(:road).distinct.all.map { |r| r[:road] }
+
+  @roadlist = roadlist.sort { |a, b|
+    if a[0] != b[0]
+      b[0] <=> a[0]
+    else
+      a[1..-1].to_i - b[1..-1].to_i
+    end
+  }
+
+#  puts @roadlist.join ', '
+
+  class << self
+    attr_reader :roadlist
+  end
+
+  def roads
+    self.class.roadlist
+  end
+
   get('/css/style.css') { scss :style }
 
   get '/' do

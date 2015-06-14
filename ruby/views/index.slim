@@ -4,8 +4,10 @@ div#form-holder
       legend Select or Search
       label for="road" Road
       select#road
-        option M3
-        option M27
+        - roads.each do |road|
+          option #{road}
+      br
+
       label for="location" Location
       input#location type="text" name="location" placeholder="location"
 
