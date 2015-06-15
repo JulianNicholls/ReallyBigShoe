@@ -60,7 +60,7 @@ class RoadworksLoader
   end
 end
 
-xml_file = ARGV[0] || "ha_roadworks_2015_06_01.xml"
+xml_file = ARGV[0] || "ha_roadworks_2015_06_15.xml"
 loader = RoadworksLoader.new xml_file
 loader.process_file
 puts "\nDone."

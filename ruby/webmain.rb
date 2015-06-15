@@ -21,17 +21,26 @@ class RoadworksApp < Sinatra::Application
 #  puts @roadlist.join ', '
 
   class << self
-    attr_reader :roadlist
+    attr_reader :roadlist, :roadworks
   end
 
   def roads
     self.class.roadlist
   end
 
+  def road_table
+    self.class.roadworks
+  end
+
   get('/css/style.css') { scss :style }
 
   get '/' do
     slim :index
+  end
+
+  get '/road/:road' do
+    @road_data = road_table.filter(road: params[:road]).all
+    slim :road_data, layout:false
   end
 end
 
@@ -152,7 +161,7 @@ article {       /* A road defaults */
 
     p {
         font-family: "Lucida Sans", "Lucida Grande", Lucida, sans-serif;
-        margin: 10px 20px 0;
+        margin: 10px 20px;
     }
 
     h1 {    /* A road name */
