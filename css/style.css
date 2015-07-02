@@ -1,0 +1,35 @@
+/* style.css */
+
+body {
+    padding-top: 70px;        /* Skip past navbar */
+}
+
+nav img {
+    margin-top: -7px;
+}
+
+.jumbotron {
+    background: url('../img/faded-ducks.jpg') no-repeat top center;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    border-top: 2px solid #aaa;
+    background-color: #ddd;
+}
+
+footer nav ul {
+    list-style: none;
+}
+
+footer nav ul li {
+    float: left;
+    margin-right: 20px;
+}
