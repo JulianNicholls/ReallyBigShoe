@@ -1,5 +1,5 @@
 # ReallyBigShoe
 Contents of ReallyBigShoe website
 
-Being converted to Ruby with Sinatra
+Parts of it are converted to Ruby with Sinatra
 
