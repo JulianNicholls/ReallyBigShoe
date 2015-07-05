@@ -1,5 +1,4 @@
 # ReallyBigShoe
 Contents of ReallyBigShoe website
 
-Parts of it are converted to Ruby with Sinatra
-
+Re-worked in July 2015 to use Bootstrap.
