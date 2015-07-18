@@ -9,13 +9,23 @@ nav img {
 }
 
 .jumbotron {
-    background: url('../img/faded-ducks.jpg') no-repeat top center;
+    background: url('../images/faded-ducks.jpg') no-repeat top center;
     color: white;
     text-align: center;
 }
 
 h2 {
     text-align: center;
+}
+
+.display-panel {
+    margin-top: 2em;
+    background: #eaeaea;
+    border-radius: 10px;
+}
+
+.display-panel .row {
+    padding-bottom: 1em;
 }
 
 footer {
