@@ -9,9 +9,10 @@ nav img {
 }
 
 .jumbotron {
-    background: url('../images/faded-ducks.jpg') no-repeat top center;
-    color: white;
+    background: url('../images/street.jpg') no-repeat top center;
+    color: black;
     text-align: center;
+    min-height: 400px;
 }
 
 h2 {
