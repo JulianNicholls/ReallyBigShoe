@@ -4,19 +4,40 @@ body {
     padding-top: 70px;        /* Skip past navbar */
 }
 
+#main {
+    background: url('../images/seascape.jpg') no-repeat top center;
+}
+
 nav img {
-    margin-top: -7px;
+    margin-top: -8px;
 }
 
 .jumbotron {
-    background: url('../images/street.jpg') no-repeat top center;
     color: black;
     text-align: center;
-    min-height: 400px;
+}
+
+.heading {
+    padding: 70px 0 70px 0;
+}
+
+.heading h1 {
+    text-align: center;
+    font-size: 4em;
 }
 
 h2 {
     text-align: center;
+}
+
+.col-sm-4 h4 {
+    font-weight: normal;
+}
+
+footer.sticky {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .display-panel {
