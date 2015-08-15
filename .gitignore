@@ -6,4 +6,5 @@
 *.xml
 temp/
 ruby/.sass-cache/*
+.updated
 
