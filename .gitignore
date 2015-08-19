@@ -1,10 +1,8 @@
 *.swp
 .DS_Store
 *~
-*.bak
 *.gz
 *.xml
 temp/
 ruby/.sass-cache/*
 .updated
-

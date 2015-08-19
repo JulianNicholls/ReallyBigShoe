@@ -1,9 +1,5 @@
 /* style.css */
 
-body {
-    padding-top: 70px;        /* Skip past navbar */
-}
-
 #main {
     background: url('../images/seascape.jpg') no-repeat top center;
     background-size: cover;
