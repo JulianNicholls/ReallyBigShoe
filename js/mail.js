@@ -8,8 +8,10 @@ $(function() {
         var ok = true;
 
         $(".noblank").each(function() {
-            if(trim($(this).val()) === '') {
-                $(this).css('border', '2px solid red');
+            var $this = $(this);
+
+            if(trim($this.val()) === '') {
+                $this.css('border', '2px solid red');
                 ok = false;
             }
         });
