@@ -16,10 +16,11 @@ $(function() {
             }
         });
 
+        var $info = $("#contact-holder > p");
+
         if(ok) {
             $("#contact-send").fadeOut(600);
             $.post("contact.php?a=1", $("#contact-form").serialize(), function(data) {
-                var $info = $("#contact-holder > p");
 
                 // alert( 'data: "' + data + '"' );
 
@@ -37,7 +38,8 @@ $(function() {
             });
         }
         else {
-            alert( 'You must fill in the indicated fields.')
+            $info.text('You must fill in the indicated fields.')
+                 .css({ 'fontWeight': 'bold', 'color': '#ff2020', 'fontSize': '120%' });
         }
 
         return  false;  // Submit has been done
