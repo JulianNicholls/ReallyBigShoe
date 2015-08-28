@@ -1,6 +1,6 @@
 /* style.css */
 
-#main {
+#main, #portfolio, #contact {
     background: url('../images/seascape.jpg') no-repeat top center;
     background-size: cover;
 }
@@ -30,20 +30,19 @@ h2 {
     font-weight: normal;
 }
 
-footer.sticky {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 .display-panel {
+    padding-top: 10px;
     margin-top: 2em;
     background: #eaeaea;
     border-radius: 10px;
 }
 
+.display-panel h2 {
+    margin-bottom: 0.6em;
+}
+
 .display-panel .row {
-    padding-bottom: 1em;
+    padding-bottom: 1.5em;
 }
 
 footer {
@@ -53,6 +52,12 @@ footer {
     background-color: #ddd;
 }
 
+.sticky {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 footer nav ul {
     list-style: none;
 }
@@ -60,4 +65,22 @@ footer nav ul {
 footer nav ul li {
     float: left;
     margin-right: 20px;
+}
+
+@media(max-height: 1000px) {
+    #portfolio .sticky {
+        position: static;
+    }
+}
+
+@media(max-height: 820px) {
+    #contact .sticky {
+        position: static;
+    }
+}
+
+@media(max-height: 540px) {
+    #main .sticky {
+        position: static;
+    }
 }
