@@ -1,6 +1,6 @@
 <?php
 /*
-  Copyright © Julian Nicholls 2010-2015, All Rights Reserved.
+  Copyright © Julian Nicholls 2010-2016, All Rights Reserved.
   Licensed for use on one site: reallybigshoe.co.uk
 */
 
