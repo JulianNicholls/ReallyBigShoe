@@ -6,3 +6,4 @@
 temp/
 ruby/.sass-cache/*
 .updated
+tmp

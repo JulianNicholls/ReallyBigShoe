@@ -1,6 +1,6 @@
 /* style.css */
 
-#main, #portfolio, #contact {
+#main, #portfolio, #contact, #pi {
     background: url('../images/seascape.jpg') no-repeat top center;
     background-size: cover;
 }
@@ -11,6 +11,14 @@ nav img {
 
 .jumbotron {
     color: black;
+}
+
+.room-above {
+    margin-top: 40px !important;
+}
+
+.light {
+    color: #eee;
 }
 
 .heading {
@@ -24,6 +32,14 @@ nav img {
 
 h2 {
     text-align: center;
+}
+
+.jumbotron h1 {
+    margin-top: 0;
+}
+
+ul#skills {
+    width: 50em;
 }
 
 .col-sm-4 h4 {
@@ -45,10 +61,24 @@ h2 {
     padding-bottom: 1.5em;
 }
 
+.resources {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.resources ul {
+    font-size: 120%;
+}
+
+.resources ul li a {
+    color: #008;
+}
+
 footer {
     margin-top: 40px;
     padding: 10px;
-    border-top: 2px solid #aaa;
+    border-top: 1px solid #aaa;
     background-color: #ddd;
 }
 
@@ -68,7 +98,7 @@ footer nav ul li {
 }
 
 @media(max-height: 1000px) {
-    #portfolio .sticky {
+    #main .sticky, #portfolio .sticky {
         position: static;
     }
 }
@@ -80,7 +110,7 @@ footer nav ul li {
 }
 
 @media(max-height: 540px) {
-    #main .sticky {
+    #pi .sticky {
         position: static;
     }
 }
