@@ -19,6 +19,7 @@ nav img {
 
 .light {
     color: #eee;
+    text-shadow: 1px 1px 1px black;
 }
 
 .heading {
@@ -67,6 +68,7 @@ ul#skills {
     border-radius: 10px;
     margin: 10px;
 }
+
 .resources ul {
     font-size: 120%;
 }
@@ -98,7 +100,7 @@ footer nav ul li {
 }
 
 @media(max-height: 1000px) {
-    #main .sticky, #portfolio .sticky {
+    #portfolio .sticky {
         position: static;
     }
 }
@@ -110,7 +112,7 @@ footer nav ul li {
 }
 
 @media(max-height: 540px) {
-    #pi .sticky {
+    #main .sticky, #pi .sticky {
         position: static;
     }
 }
