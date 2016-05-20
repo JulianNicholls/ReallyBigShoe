@@ -39,16 +39,12 @@ h2 {
     margin-top: 0;
 }
 
-ul#skills {
-    width: 50em;
-}
-
 .col-sm-4 h4 {
     font-weight: normal;
 }
 
 .display-panel {
-    padding-top: 10px;
+    padding: 20px 20px 0 20px;
     margin-top: 2em;
     background: #eaeaea;
     border-radius: 10px;
