@@ -8,13 +8,13 @@
 // Defined Values
 //---------------------------------------------------------------------------
 
-    define( 'DESTINATION',    'julian@reallybigshoe.co.uk' );
-    define( 'FROM_FORM',      'info@reallybigshoe.co.uk' );
-    define( 'FROM_EMAIL',     'Really Big Shoe Contact Form <' . FROM_FORM . '>' );
-    define( 'FROM_HEADER',    'From: ' . FROM_EMAIL . "\n" );
+    define('DESTINATION', 'julian@reallybigshoe.co.uk');
+    define('FROM_FORM',   'info@reallybigshoe.co.uk');
+    define('FROM_EMAIL',  'Really Big Shoe Contact Form <' . FROM_FORM . '>');
+    define('FROM_HEADER', 'From: ' . FROM_EMAIL . "\n");
 
-    ini_set( 'SMTP', 'mail.reallybigshoe.co.uk' );
-    ini_set( 'sendmail_from', FROM_FORM );
+    ini_set('SMTP', 'mail.reallybigshoe.co.uk');
+    ini_set('sendmail_from', FROM_FORM);
 
 //---------------------------------------------------------------------------
 
@@ -30,6 +30,8 @@
     $body .= "\nEmail Address: " . $_POST['email'];
     $body .= "\n\nSubject:       $subject";
     $body .= "\nMessage\n\n  " . $_POST['message'];
+
+    $body .= "ReCaptcha Response: " . $_POST["g-recaptcha-response"];
 
 // Send it
 
